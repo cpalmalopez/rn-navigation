@@ -1,4 +1,5 @@
 import React from 'react'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
@@ -31,16 +32,16 @@ const TabsAndroid = () => {
                     let iconName: string = '';
                     switch (route.name) {
                         case 'Tab1Screen':
-                            iconName='T1'
+                            iconName='airplane-outline'
                             break;
                         case 'Tab2Screen':
-                            iconName='T2'
+                            iconName='add-outline'
                             break;
                         case 'StackNavigator':
-                            iconName='ST'
+                            iconName='baseball-outline'
                             break;
                     }
-                    return <Text style={{color}}>{iconName}</Text>
+                    return <Icon name={iconName} size={20} color={color} />
                 }
             })}
         >
@@ -75,16 +76,16 @@ const TabsIOS = () => {
                     let iconName: string = '';
                     switch (route.name) {
                         case 'Tab1Screen':
-                            iconName='T1'
+                            iconName='airplane-outline'
                             break;
                         case 'Tab2Screen':
-                            iconName='T2'
+                            iconName='add-outline'
                             break;
                         case 'StackNavigator':
-                            iconName='ST'
+                            iconName='baseball-outline'
                             break;
                     }
-                    return <Text style={{color}}>{iconName}</Text>
+                    return <Icon name={iconName} size={20} color={color} />
                 }
             })}
         >
