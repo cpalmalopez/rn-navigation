@@ -1,17 +1,19 @@
 import React from 'react'
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentOptions, DrawerContentScrollView } from '@react-navigation/drawer';
 import { SettingsScreen } from '../screens/SettingsScreen';
-import { StackNavigator } from './StackNavigator';
+//import { StackNavigator } from './StackNavigator';
 import { Image, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import { styles } from '../theme/appTheme';
+import { Tabs } from './Tabs';
 //import { createStackNavigator } from '@react-navigation/stack';
 
-export type RootStackParams = {
-    StackNavigator: undefined,
-    SettingsScreen: undefined,
-};
+// export type RootStackParams = {
+//     StackNavigator: undefined,
+//     SettingsScreen: undefined,
+//     Tabs: undefined
+// };
 
-const Drawer = createDrawerNavigator<RootStackParams>();
+const Drawer = createDrawerNavigator/*<RootStackParams>*/();
 
 // Ejemplo para resolver el Stack de Settings
 // const Stack = createStackNavigator();
@@ -38,7 +40,7 @@ export const MenuLateral = () => {
             drawerContent={props => <MenuInterno {...props} />}
         >
             {/* Definición de Screens */}
-            <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+            <Drawer.Screen name="Tabs" component={Tabs} />
             <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
         </Drawer.Navigator>
     );
@@ -61,7 +63,7 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps<DrawerContentOpti
             <View style={ styles.menuContainer }>
                 <TouchableOpacity 
                     style={styles.menuBoton}
-                    onPress={() => navigation.navigate('StackNavigator')}
+                    onPress={() => navigation.navigate('Tabs')}
                 >
                     <Text style={styles.menuItem}>Home</Text>
                 </TouchableOpacity>
