@@ -15,7 +15,7 @@ export const Pagina1Screen = ({ navigation}: Props) => {
     useEffect(() => {
         navigation.setOptions({
             headerLeft: () => (
-                width <= height ? 
+                width < height ? 
                 <TouchableOpacity
                     style={{ marginLeft: 15}}
                     onPress={() => navigation.toggleDrawer()}
@@ -25,7 +25,7 @@ export const Pagina1Screen = ({ navigation}: Props) => {
                 : null
             )
         })
-    }, []);
+    }, [width]);
 
     return (
         <View style={ styles.globalMargin }>
