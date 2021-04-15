@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/Ionicons'
 // > yarn add -D @types/react-native-vector-icons
 import { colores, styles } from '../theme/appTheme'
+import { TouchableIcon } from '../components/TouchableIcon';
 
 export const Tab1Screen = () => {
 
@@ -17,15 +18,15 @@ export const Tab1Screen = () => {
         <View style={{ ...styles.globalMargin, marginTop: top + 10 }}>
             <Text style={styles.title}>tab 1 screen</Text>
             <Text>
-                <Icon name="airplane-outline" size={50} color={colores.primary} />
-                <Icon name="add-outline" size={50} color={colores.primary} />
-                <Icon name="add-circle-outline" size={50} color={colores.primary} />
-                <Icon name="alert-outline" size={50} color={colores.primary} />
-                <Icon name="arrow-back-outline" size={50} color={colores.primary} />
-                <Icon name="baseball-outline" size={50} color={colores.primary} />
-                <Icon name="bed-outline" size={50} color={colores.primary} />
-                <Icon name="bookmark-outline" size={50} color={colores.primary} />
-                <Icon name="bulb-outline" size={50} color={colores.primary} />
+                <TouchableIcon iconName="add-outline" />
+                <TouchableIcon iconName="airplane-outline" />
+                <TouchableIcon iconName="add-circle-outline" />
+                <TouchableIcon iconName="alert-outline" />
+                <TouchableIcon iconName="arrow-back-outline" />
+                <TouchableIcon iconName="baseball-outline" />
+                <TouchableIcon iconName="bed-outline" />
+                <TouchableIcon iconName="bookmark-outline" />
+                <TouchableIcon iconName="bulb-outline" />
             </Text>
         </View>
     )
